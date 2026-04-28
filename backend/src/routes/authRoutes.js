@@ -7,16 +7,16 @@ const handleValidationErrors = require('../middleware/validationMiddleware');
 
 router.post(
   '/register',
-  validateRegister,        // Step 1: Check validation rules
-  handleValidationErrors,   // Step 2: If errors exist, stop and send them
-  registerUser              // Step 3: If validation passes, create user
+  validateRegister,        
+  handleValidationErrors,   
+  registerUser              
 );
 
 router.post(
   '/login',
-  validateLogin,           // Step 1: Check email format, password not empty
-  handleValidationErrors,   // Step 2: Send errors if validation fails
-  loginUser                 // Step 3: Authenticate and send token
+  validateLogin,           
+  handleValidationErrors,   
+  loginUser                
 )
 
 router.post('/logout', logoutUser);

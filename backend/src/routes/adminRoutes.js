@@ -5,8 +5,8 @@ const { protect } = require('../middleware/authMiddleware');
 const { adminOnly } = require('../middleware/adminMiddleware');
 
 
-router.use(protect);     // Step 1: Check if logged in
-router.use(adminOnly);   // Step 2: Check if admin
+router.use(protect);     
+router.use(adminOnly);   
 
 
 router.get('/users', getAllUsers);

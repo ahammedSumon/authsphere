@@ -1,12 +1,9 @@
 const User = require('../models/User');
 
-// @desc    Get all users (admin only)
-// @route   GET /api/admin/users
-// @access  Private/Admin
+
 const getAllUsers = async (req, res) => {
   try {
-    // Find all users, exclude passwords
-    // Sort by creation date (newest first)
+    
     const users = await User.find({})
       .select('-password')
       .sort({ createdAt: -1 });
@@ -34,9 +31,7 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-// @desc    Delete a user by ID (admin only)
-// @route   DELETE /api/admin/users/:id
-// @access  Private/Admin
+
 const deleteUser = async (req, res) => {
   try {
     const userId = req.params.id;

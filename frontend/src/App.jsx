@@ -18,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Protected Routes (Require Login) */}
+        {/* Protected Routes */}
         <Route
           path="/dashboard"
           element={
@@ -28,7 +28,7 @@ function App() {
           }
         />
 
-        {/* Admin Routes (Require Admin Role) */}
+        {/* Admin Routes */}
         <Route
           path="/admin"
           element={

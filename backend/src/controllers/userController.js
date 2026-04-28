@@ -1,12 +1,9 @@
 const User = require('../models/User');
 
-// @desc    Get current user's profile
-// @route   GET /api/users/profile
-// @access  Private (Requires login)
+
 const getProfile = async (req, res) => {
   try {
-    // req.user is attached by the protect middleware
-    // We already have the full user object, just send it back
+    
     res.status(200).json({
       success: true,
       user: {
@@ -29,9 +26,7 @@ const getProfile = async (req, res) => {
   }
 };
 
-// @desc    Update user profile
-// @route   PUT /api/users/profile
-// @access  Private (Requires login)
+
 const updateProfile = async (req, res) => {
   try {
     const { name, description, schoolName } = req.body;
@@ -87,9 +82,7 @@ const updateProfile = async (req, res) => {
   }
 };
 
-// @desc    Delete user account
-// @route   DELETE /api/users/profile
-// @access  Private (Requires login)
+
 const deleteProfile = async (req, res) => {
   try {
     // Find and delete the authenticated user
