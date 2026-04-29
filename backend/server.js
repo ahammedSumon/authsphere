@@ -13,6 +13,8 @@ connectDB();
 const app = express();
 
 // ⭐ CORS - MUST be before routes
+// The cors() middleware with options handles preflight requests automatically
+// for the specified origins, so a separate app.options call is not needed.
 app.use(cors({
   origin: [
     'http://localhost:5173',
@@ -23,9 +25,6 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-
-// Handle preflight requests
-app.options('*', cors());
 
 // Body parser
 app.use(express.json());
