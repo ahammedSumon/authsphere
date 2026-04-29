@@ -81,7 +81,7 @@ const loginUser = async (req, res) => {
 
     const token = generateToken(user._id);
 
-    res.cookie('token', token, {
+    res.cookie('__Secure-token', token, {
       httpOnly: true,        
       secure: true,        
       sameSite: 'none',    
@@ -114,7 +114,7 @@ const loginUser = async (req, res) => {
 const logoutUser = async (req, res) => {
   try {
     // Clear the token cookie
-    res.clearCookie('token', {
+    res.clearCookie('__Secure-token', {
       httpOnly: true,
       secure: true,        // Match the same options used when setting
       sameSite: 'none',

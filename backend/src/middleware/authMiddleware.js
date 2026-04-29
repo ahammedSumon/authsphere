@@ -4,8 +4,8 @@ const User = require('../models/User');
 const protect = async (req, res, next) => {
   let token;
 
-  if (req.cookies && req.cookies.token) {
-    token = req.cookies.token;
+  if (req.cookies && req.cookies.__Secure-token) {
+    token = req.cookies.__Secure-token;
   }
 
   if (!token) {
