@@ -11,9 +11,12 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173',
-   'https://authsphere.vercel.app', ],
-  credentials: true,        
+  origin: [
+    'http://localhost:5173',
+    'https://authsphere-api.onrender.com',
+    'https://authsphere.vercel.app',
+  ],
+  credentials: true,
 }));
 
 app.use(express.json());
