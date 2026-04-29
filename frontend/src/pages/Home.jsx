@@ -30,7 +30,7 @@ const Home = () => {
                 to="/register"
                 className="bg-white text-indigo-700 font-bold text-lg px-8 py-4 rounded-xl hover:bg-blue-50 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
               >
-                Get Started Free
+                Get Started For Free
               </Link>
               <Link
                 to="/login"
@@ -66,7 +66,7 @@ const Home = () => {
             </div>
             <h3 className="text-white font-bold text-xl mb-3">Profile Management</h3>
             <p className="text-blue-100 leading-relaxed text-sm">
-              Update your profile details, add descriptions, and manage your account information with ease.
+              Update your profile details, descriptions, and manage your account information with ease.
             </p>
           </div>
           
