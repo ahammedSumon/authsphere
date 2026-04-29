@@ -80,6 +80,8 @@ const loginUser = async (req, res) => {
     }
 
     const token = generateToken(user._id);
+    console.log('Token generated:', token ? 'YES' : 'NO');
+console.log('Token length:', token.length);
 
     res.cookie('__Secure-token', token, {
       httpOnly: true,        
@@ -88,6 +90,7 @@ const loginUser = async (req, res) => {
       maxAge: 7 * 24 * 60 * 60 * 1000,
       partitioned: true,
     });
+    console.log('Cookie set command executed');
 
     res.status(200).json({
       success: true,
