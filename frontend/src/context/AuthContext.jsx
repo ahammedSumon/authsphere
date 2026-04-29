@@ -43,18 +43,25 @@ export const AuthProvider = ({ children }) => {
 
   // Login
   const login = async (email, password) => {
-    const response = await api.post('/auth/login', { email, password })
-    setUser(response.data.user)
-    localStorage.setItem('user', JSON.stringify(response.data.user))
-    return response.data
+  const response = await api.post('/auth/login', { email, password });
+  setUser(response.data.user);
+  localStorage.setItem('user', JSON.stringify(response.data.user));
+  
+  // Save token from response body
+  if (response.data.token) {
+    localStorage.setItem('token', response.data.token);
   }
+  
+  return response.data;
+};
 
   // Logout
   const logout = async () => {
-    await api.post('/auth/logout')
-    setUser(null)
-    localStorage.removeItem('user')
-  }
+  await api.post('/auth/logout');
+  setUser(null);
+  localStorage.removeItem('user');
+  localStorage.removeItem('token');
+};
 
   // Update profile
   const updateProfile = async (profileData) => {
