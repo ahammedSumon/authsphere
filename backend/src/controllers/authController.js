@@ -88,7 +88,7 @@ console.log('Token length:', token.length);
       secure: true,        
       sameSite: 'none',    
       maxAge: 7 * 24 * 60 * 60 * 1000,
-      partitioned: true,
+      
     });
     console.log('Cookie set command executed');
 
@@ -122,7 +122,6 @@ const logoutUser = async (req, res) => {
       httpOnly: true,
       secure: true,        // Match the same options used when setting
       sameSite: 'none',
-      partitioned: true,
     });
 
     res.status(200).json({
