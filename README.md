@@ -6,12 +6,9 @@ A production-grade authentication and user management system built with the MERN
 
 **[View Live Application](https://authsphere.vercel.app)**
 
-> **Test Credentials:**  
-> Email: `demo@example.com` | Password: `demo123` *(Register a new account to test)*
-
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 | Home Page | Register | Login |
 |-----------|----------|-------|
@@ -23,37 +20,37 @@ A production-grade authentication and user management system built with the MERN
 
 ---
 
-## ✨ Features
+## Features
 
 ### Authentication
-- 🔑 **User Registration** with input validation
-- 🔓 **User Login** with JWT token generation
-- 🔒 **Logout** with session termination
-- ✅ **Input Validation** (name, email format, password strength)
+- **User Registration** with input validation
+- **User Login** with JWT token generation
+- **Logout** with session termination
+- **Input Validation** (name, email format, password strength)
 
 ### Profile Management
-- 👤 **View Profile** - See your details and account info
-- ✏️ **Edit Profile** - Update name, description, and school
-- 🗑️ **Delete Account** - Permanently remove your account
+- **View Profile** - See your details and account info
+- **Edit Profile** - Update name, description, and school
+- **Delete Account** - Permanently remove your account
 
 ### Admin Dashboard
-- 📊 **Stats Overview** - Total users, admin count, regular users
-- 👥 **User Management** - View all registered users in a table
-- 🔍 **Search Users** - Filter by name, email, or school
-- ❌ **Delete Users** - Remove any user (self-deletion protected)
-- 🛡️ **Role Protection** - Regular users cannot access admin routes
+- **Stats Overview** - Total users, admin count, regular users
+- **User Management** - View all registered users in a table
+- **Search Users** - Filter by name, email, or school
+- **Delete Users** - Remove any user (self-deletion protected)
+- **Role Protection** - Regular users cannot access admin routes
 
 ### Security
-- 🔐 **Password Hashing** with bcrypt (10 salt rounds)
-- 🎫 **JWT Authentication** with HTTP-Only cookies
-- 🛡️ **Role-Based Access Control** (User vs Admin)
-- 🚫 **Route Protection** - Unauthorized users redirected
-- 🔒 **CORS Configuration** - Only allows trusted origins
-- 🛑 **Input Sanitization** - Prevents malicious data
+- **Password Hashing** with bcrypt (10 salt rounds)
+- **JWT Authentication** with HTTP-Only cookies
+- **Role-Based Access Control** (User vs Admin)
+- **Route Protection** - Unauthorized users redirected
+- **CORS Configuration** - Only allows trusted origins
+- **Input Sanitization** - Prevents malicious data
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -66,7 +63,7 @@ A production-grade authentication and user management system built with the MERN
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 authsphere/
@@ -114,11 +111,11 @@ authsphere/
 
 ---
 
-## 🚀 Installation & Local Setup
+## Installation & Local Setup
 
 ### Prerequisites
 - **Node.js** (v18 or higher)
-- **MongoDB Atlas** account (free tier)
+- **MongoDB Atlas** account
 
 ### 1. Clone the Repository
 ```bash
@@ -162,7 +159,7 @@ After registering, manually change `role` from `"user"` to `"admin"` in MongoDB 
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Public Routes
 | Method | Endpoint | Description |
@@ -186,7 +183,7 @@ After registering, manually change `role` from `"user"` to `"admin"` in MongoDB 
 
 ---
 
-## 🔒 Security Features Deep Dive
+## Security Features Deep Dive
 
 | Feature | Implementation |
 |---------|---------------|
@@ -200,7 +197,7 @@ After registering, manually change `role` from `"user"` to `"admin"` in MongoDB 
 
 ---
 
-## 🐛 Challenges & Solutions
+## Challenges & Solutions
 
 ### Cross-Domain Cookie Issue
 **Problem:** Cookies set by Render backend were stripped by Cloudflare proxy, preventing authentication on Vercel frontend.
@@ -214,7 +211,7 @@ After registering, manually change `role` from `"user"` to `"admin"` in MongoDB 
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Email verification with Nodemailer
 - [ ] Password reset flow
@@ -227,7 +224,7 @@ After registering, manually change `role` from `"user"` to `"admin"` in MongoDB 
 
 ---
 
-## 🎓 What I Learned
+## What I Learned
 
 - Building RESTful APIs with Express.js
 - Implementing JWT authentication
@@ -243,7 +240,7 @@ After registering, manually change `role` from `"user"` to `"admin"` in MongoDB 
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Salauddin Ahammed Sumon**
 
@@ -254,7 +251,7 @@ After registering, manually change `role` from `"user"` to `"admin"` in MongoDB 
 
 ---
 
-## 📝 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
